@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Expense Tracker</h1>
+    <p>Ứng dụng theo dõi chi tiêu cá nhân dành cho sinh viên và người lao động.</p>
+    <nav>
+      <a href="/">Trang chủ</a>
+      <a href="/about">/about</a>
+      <a href="/health" target="_blank">/health</a>
+    </nav>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2 id="formTitle">Thêm khoản chi</h2>
+      <form id="expenseForm">
+        <input type="hidden" id="expenseId" />
+
+        <label for="amount">Số tiền</label>
+        <input id="amount" type="number" min="0" step="1000" placeholder="Ví dụ: 50000" required />
+
+        <label for="category">Danh mục</label>
+        <input id="category" type="text" placeholder="Ăn uống, đi lại, học tập..." required />
+
+        <label for="expense_date">Ngày chi</label>
+        <input id="expense_date" type="date" required />
+
+        <label for="note">Ghi chú</label>
+        <textarea id="note" rows="4" placeholder="Ghi chú thêm..."></textarea>
+
+        <div class="actions">
+          <button type="submit">Lưu</button>
+          <button type="button" id="cancelEdit" class="secondary">Hủy sửa</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Danh sách chi tiêu</h2>
+      <p id="message"></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Số tiền</th>
+            <th>Danh mục</th>
+            <th>Ngày</th>
+            <th>Ghi chú</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="expenseTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
