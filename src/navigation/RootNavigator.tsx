@@ -14,6 +14,7 @@ import JobDetailScreen from '../screens/JobDetailScreen';
 import SavedJobsScreen from '../screens/SavedJobsScreen';
 import PostScreen from '../screens/PostScreen';
 import MessageScreen from '../screens/MessageScreen';
+import SearchScreen from '../screens/SearchScreen';
 
 export type RootStackParamList = {
   Welcome: undefined;
@@ -26,6 +27,7 @@ export type RootStackParamList = {
   ForgotPassword: undefined;
   Login: undefined;
   Home: undefined;
+  Search: undefined;
   SavedJobs: undefined;
   Post: undefined;
   Message: undefined;
@@ -57,6 +59,7 @@ export default function RootNavigator() {
       <Stack.Screen<"ForgotPassword"> name="ForgotPassword" component={ForgotPasswordScreen} />
       <Stack.Screen<"Login"> name="Login" component={LoginScreen} />
       <Stack.Screen<"Home"> name="Home" component={HomeScreen} />
+      <Stack.Screen<"Search"> name="Search" component={SearchScreen} />
       <Stack.Screen<"SavedJobs"> name="SavedJobs" component={SavedJobsScreen} />
       <Stack.Screen<"Post"> name="Post" component={PostScreen} />
       <Stack.Screen<"Message"> name="Message" component={MessageScreen} />

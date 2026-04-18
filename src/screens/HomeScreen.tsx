@@ -125,11 +125,11 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
           <Text style={styles.userName}>Ngo Anh Tu</Text>
         </View>
 
-        <View style={styles.searchContainer}>
+        <TouchableOpacity style={styles.searchContainer} activeOpacity={0.9} onPress={() => navigation.navigate('Search')}>
           <Text style={styles.searchIcon}>⌕</Text>
           <Text style={styles.searchPlaceholder}>Search</Text>
           <Text style={styles.searchFilter}>⟲</Text>
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.banner}>
           <View style={styles.bannerLeft}>
